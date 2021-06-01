@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <name>Instant Restart</name>
+    <directory>instant-restart</directory>
+    <id>2501774931</id>
+    <description>A simple mode allowing you to restart your run instantly on hitting the R key instead of holding it!</description>
+    <version>1.0.4</version>
+    <visibility>Public</visibility>
+    <tag id="Lua"/>
+    <tag id="Tweaks"/>
+</metadata>

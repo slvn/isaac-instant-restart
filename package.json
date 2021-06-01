@@ -1,0 +1,14 @@
+{
+  "name": "isaac-instant-restart",
+  "version": "1.0.2",
+  "description": "A mod for The Binding of Isaac: Repentance",
+  "keywords": [
+    "isaac",
+    "mod",
+    "repentance"
+  ],
+  "license": "GPL-3.0",
+  "dependencies": {
+    "isaacscript": "^1.0.120"
+  }
+}
