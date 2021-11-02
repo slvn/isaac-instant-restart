@@ -21,8 +21,8 @@ ____modules = {
 ["main"] = function() --[[ Generated with https://github.com/TypeScriptToLua/TypeScriptToLua ]]
 mod = RegisterMod("Instant Restart", 1)
 function inputAction(self, _entity, _hook, buttonAction)
-    if (Input.IsActionTriggered(ButtonAction.ACTION_RESTART, 0) and (buttonAction == ButtonAction.ACTION_RESTART)) and (not Game():IsPaused()) then
-        Isaac.DebugString("----- instant-restart - Restart -----  ")
+    if ((Input.IsActionTriggered(ButtonAction.ACTION_RESTART, 0) and (buttonAction == ButtonAction.ACTION_RESTART)) and (not Game():IsPaused())) and (Game():GetLevel():GetStage() == LevelStage.STAGE1_1) then
+        Isaac.DebugString("----- LOL instant-restart - Restart -----  ")
         Isaac.ExecuteCommand("restart")
         return false
     end
