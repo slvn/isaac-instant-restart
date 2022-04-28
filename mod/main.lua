@@ -39,7 +39,6 @@ function Update()
 	if timecounter < 1 then
 		visit_depths2 = nil;
 		stage_flag = nil;
-		debugText = "reset"
 	end
 end
 
