@@ -1,31 +1,35 @@
+import {
+  ButtonAction,
+  LevelStage,
+  ModCallback,
+  InputHook
+} from "isaac-typescript-definitions";
+
 // Register the mod
 const mod = RegisterMod("Instant Restart", 1);
 
 // Define callback functions
 function inputAction(
-  _entity: Entity,
-  _hook: any,
+  _entity: Entity | undefined,
+  _hook: InputHook,
   buttonAction: ButtonAction,
-): number | boolean | null {
+): number | boolean | void {
   if (
-    Input.IsActionTriggered(ButtonAction.ACTION_RESTART, 0) &&
-    buttonAction === ButtonAction.ACTION_RESTART &&
+    Input.IsActionTriggered(ButtonAction.RESTART, 0) &&
+    buttonAction === ButtonAction.RESTART &&
     !Game().IsPaused() &&
-    Game().GetLevel().GetStage() === LevelStage.STAGE1_1
+    Game().GetLevel().GetStage() === LevelStage.BASEMENT_1 &&
+    !Game().GetLevel().IsAscent()
   ) {
     Isaac.DebugString("----- LOL instant-restart - Restart -----  ");
     Isaac.ExecuteCommand("restart");
     return false;
   }
-  return null;
 }
 
 // Register callbacks
 mod.AddCallback(
-  ModCallbacks.MC_INPUT_ACTION,
+  ModCallback.INPUT_ACTION,
   inputAction,
   InputHook.IS_ACTION_PRESSED,
 );
-
-// Print an initialization message to the "log.txt" file
-Isaac.DebugString("instant-restart initialized.");

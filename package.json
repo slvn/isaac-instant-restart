@@ -9,6 +9,6 @@
   ],
   "license": "GPL-3.0",
   "dependencies": {
-    "isaacscript": "^1.1.32"
+    "isaacscript": "^2.1.2"
   }
 }
