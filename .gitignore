@@ -2,6 +2,9 @@
 # isaac-instant-restart
 # ---------------------
 
+# Visual Studio Code
+.vscode/
+
 # MacOS artifacts
 .DS_Store
 
