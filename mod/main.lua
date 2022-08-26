@@ -11,7 +11,7 @@ local function inputAction(_,_,_, buttonAction)
         Isaac.ExecuteCommand("restart")
 
         if Epiphany then
-            Epiphany.runRestartedWithR = true
+            Epiphany.runRestartedWithRInstant = true
         end
 
         return false
