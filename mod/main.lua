@@ -1,9 +1,10 @@
 local Mod = RegisterMod("Instant Restart", 1)
 
 local function inputAction(_,_,_, buttonAction)
-    if  Input.IsActionTriggered(ButtonAction.RESTART, 0)
-    and buttonAction == ButtonAction.RESTART
-    and not Game():IsPaused() and Game():GetLevel():GetStage() == LevelStage.BASEMENT_1
+    if  Input.IsActionTriggered(ButtonAction.ACTION_RESTART, 0)
+    and buttonAction == ButtonAction.ACTION_RESTART
+    and not Game():IsPaused()
+    and Game():GetLevel():GetStage() == LevelStage.STAGE1_1
     and not Game():GetLevel():IsAscent() then
         
         Isaac.DebugString("----- instant-restart - Restart -----  ")
