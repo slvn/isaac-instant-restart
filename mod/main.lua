@@ -8,6 +8,11 @@ local function inputAction(_,_,_, buttonAction)
         
         Isaac.DebugString("----- instant-restart - Restart -----  ")
         Isaac.ExecuteCommand("restart")
+
+        if Epiphany then
+            Epiphany.runRestartedWithR = true
+        end
+
         return false
 
     end
