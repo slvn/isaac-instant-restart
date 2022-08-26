@@ -8,11 +8,12 @@ local function inputAction(_,_,_, buttonAction)
     and not Game():GetLevel():IsAscent() then
         
         Isaac.DebugString("----- instant-restart - Restart -----  ")
-        Isaac.ExecuteCommand("restart")
 
         if Epiphany then
             Epiphany.runRestartedWithRInstant = true
         end
+        
+        Isaac.ExecuteCommand("restart")
 
         return false
 
