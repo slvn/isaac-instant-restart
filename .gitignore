@@ -2,6 +2,10 @@
 # isaac-instant-restart
 # ---------------------
 
+# Visual Studio Code
+.vscode/
+.luarc.json
+
 # MacOS artifacts
 .DS_Store
 
